@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Simon Revisited</title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper"><!--contains the game-->
+        <!--this element contains the four areas in the game-->
+        <div class="absolute" id="colors" onmousemove="simon.mouseTracker(event)" onmousedown="simon.mouseLight()" onmouseup="simon.mouseDark()"></div>
+        <!--the next two elements represent the councentric grey and white circles-->
+        <div class="absolute rounded grey-margin" style="width:360px;height:360px;top:0;left:0;box-shadow:5px 5px 2px;z-index:-20;"></div>
+        <div class="absolute rounded grey-margin" style="width:160px;height:160px;top:100px;left:100px;background-color:white;z-index:-10;">
+            <div style="font-size:40px;text-align:center;font-family:'Courier New';padding:12px 0 0 0;margin-bottom:0;font-weight:bold;">Simon</div>
+            <div style="font-size:10px;padding:42px 0 0 0;font-family:Arial;">
+                <div class="inl" style="padding-left:17px;padding-right:5px;">LEVEL</div><div class="inl" style="padding-left:13px;">START</div><div class="inl" style="padding-left:10px;">STRICT</div>
+            </div>
+            <div style="text-align:center;font-family:Arial;margin:10px auto;font-size:14px;border:1px solid dodgerblue;width:60px;height:14px;white-space: pre-wrap;white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;" >ON  OFF</div>
+        </div>
+        <!--the four lines completing the design-->
+        <div class="absolute grey-lines" style="width:100px;height:20px;top:190px;left:5px;"></div>
+        <div class="absolute grey-lines" style="width:100px;height:20px;top:190px;left:295px;"></div>
+        <div class="absolute grey-lines" style="width:20px;height:100px;top:5px;left:190px;"></div>
+        <div class="absolute grey-lines" style="width:20px;height:100px;top:295px;left:190px;"></div>
+        <!--the button pannel in the center-->
+        <div style="position:absolute;top:175px;left:125px;z-index:20;width:140px;height:35px;margin:0 auto;">
+            <button type="button" style="font-family:Arial;font-size:24px;color:#800000;background-color:#b30000;height:35px;width:50px;border:3px solid black;border-radius:5px;margin-top:0;" class="posit" id="level">--</button>
+            <button type="button" style="background-color:greenyellow;height:25px;width:25px;border-radius:12px;box-shadow:5px 3px 5px grey;outline:none;margin-left:10px;" class="posit" onclick="simon.start()"></button>
+            <div class="posit" style="margin-left:15px;">
+                <div id="blk" style="background-color:#800000;height:8px;width:8px;border-radius:4px;margin:0 0 4px 8px;"></div>
+                <button type="button" class="blk" style="background-color:yellow;height:25px;width:25px;border-radius:12px;box-shadow:5px 3px 5px grey;outline:none;" onclick="simon.setStrict()"></button>
+            </div>
+        </div>
+        <!--blue on button--> 
+        <div id="onButton" class="absolute" onclick="simon.setOn()"></div>
+    </div>
+    <!--the code below contains the links to sounds used for animating the game-->
+    <audio id="myAudio0">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="myAudio1">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="myAudio2">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="myAudio3">
+        <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="error">
+        <source src="https://actions.google.com/sounds/v1/cartoon/cartoon_boing.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="JSFile.js"></script>
+</body>
+</html>

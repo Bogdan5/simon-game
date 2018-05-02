@@ -1,0 +1,65 @@
+﻿body {
+    background: lightcyan; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left lightcyan, lightblue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, lightcyan, lightblue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, lightcyan, lightblue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, lightcyan, lightblue); /* Standard syntax (must be last) */
+}
+
+    body > div { /*styles the wrapper*/
+        margin: auto;
+        width: 400px;
+        height: 400px;
+        position:relative;
+    }
+        body > div > div:first-child { /*styles the colors element, containing the four areas*/
+            border-top: 80px solid #990000;
+            border-left: 80px solid #cccc00;
+            border-bottom: 80px solid #000080;
+            border-right: 80px solid #003300;
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+        }
+
+.absolute{
+    position:absolute;
+}
+
+.posit {
+    display: inline-block;
+}
+
+.rounded{
+    border-radius:50%;
+}
+
+.grey-margin {
+    border: 20px solid #333333;
+}
+
+.grey-lines {
+    z-index: 20;
+    background-color: #333333;
+}
+
+.inl{
+    display:inline-block;
+}
+
+#onButton{ /*styles the on button*/
+    border-radius:3px;
+    width:28px;
+    height:13px;
+    left:170px;
+    top:240px;
+    background-color:dodgerblue;
+    z-index:20;
+    border:1px solid;
+}
